@@ -287,7 +287,7 @@ dialog button{position:fixed;top:16px;right:16px;background:#fff;color:#111;bord
     <p>도전적인 R&amp;D도 즐겁지만, 저는 그 기술을 사람들이 실제로 쓰게 만드는 과정을 더 좋아합니다.</p>
   </div>
   <div class="way">
-    <div><p class="n">01</p><h3>단순해야 써 봅니다</h3><p>전시장을 여러 번 다니며 알게 된 건, 사람들이 설명 없이 쓸 수 있는 것만 만져 본다는 점입니다. 안내로봇도 "매표소로 안내해줘" 한 마디로 쓰게 만들었습니다.</p></div>
+    <div><p class="n">01</p><h3>사용자 경험이 먼저</h3><p>사용자의 경험을 우선시해야 합니다. 전시장을 다니거나 현장을 가 보면 사용자들은 복잡한 기술 스택보다 단순하고 확실한 기능을 원합니다. 빠르게 변하는 기술 시대에는 파이프라인을 설계해 원하는 기능만 골라 전달해야 한다고 생각합니다.</p></div>
     <div><p class="n">02</p><h3>먼저 제안합니다</h3><p>Inspector를 만들면서 2D 비전 이상 탐지와 SAM 3를 더하면 좋겠다고 보고, 대표와 커피챗을 잡아 직접 제안했고 채택되었습니다. 제품 방향에 의견을 내는 일을 망설이지 않습니다.</p></div>
     <div><p class="n">03</p><h3>연구를 쓰이는 물건으로</h3><p>실내 측위, 3D 포즈 추정, 로봇 SLAM처럼 연구 단계의 기술을 받아 사람이 쓰는 화면과 흐름으로 바꾸는 일을 가장 잘합니다. 프로토타입에서 끝내지 않고 현장에서 돌아가게 만드는 데 관심이 있습니다.</p></div>
   </div>
@@ -394,6 +394,7 @@ const FEAT=[
          ["한 일",["UI Toolkit으로 공용 화면 요소와 트리 목록을 만들어 팀 공용 코어 BaseStudio로 설계","3D 모델을 불러와 검사 지점과 단계를 정하는 저작도구 화면 개발","모델 불러오기와 비전 인식 기능을 패키지로 나눠 통합","2D 이상 탐지와 SAM 3를 함께 쓰자고 대표에게 직접 제안해 채택"]],
          ["결과","Inspector 저작도구를 BaseStudio 위에서 계속 개발하고 있고, 같은 코어로 RoboSim도 만들었습니다."]],
   flow:[["BaseStudio","공용 화면 · 트리 목록",1],["저작도구","모델 · 검사 지점 · 단계",1],["패키지","모델 불러오기 · 비전 인식",1],["Inspect 제품","현장 조립 검사"]],
+  video:["video/inspector-viewer.mp4","inspector-viewer","검사 앱 화면 (33초) · 3D 모델 윤곽을 실제 장비에 맞춰 따라가는 모습"],
   links:[["제품 페이지","https://virnect.com/ko/products/inspect-assembly"]],
   imgs:[["inspector-1","검사 지점과 단계 설정 화면"],["inspector-2","3D 모델 불러오기와 검출 설정"]]},
  {id:"p-robot",eye:"진행 중 · VIRNECT",title:"안내로봇 — 로봇청소기를 길 안내 로봇으로",
@@ -438,7 +439,7 @@ const FEAT=[
          ["결과","전시에서 시연했고, 이 과정에서 프롬프팅과 LangChain, 파인튜닝 개념을 익혔습니다."]],
   flow:[["글래스 마이크","4종 기기 계층",1],["STT","스트리밍"],["LLM","+ 디지털 트윈 데이터"],["TTS","스트리밍"],["아바타","립싱크 · 모션",1]],
   imgs:[["aiglass-poster","AI 트러블슈팅 에이전트"],["aiglass-ui","음성 질문 UI"],["aiglass-expo","전시 부스"],["aiglass-twin","디지털 트윈 연동 화면"]],
-  links:[["시연 영상","https://youtu.be/N07bA4JCzBY"]]},
+  video:["video/aiglass-demo.mp4","aiglass-demo","시연 영상 (44초 · 소리 있음) · 음성 질문에 글래스와 아바타가 답하는 모습"]},
  {id:"p-vl",eye:"2023.06 – 2023.11 · VIRNECT 기술검토팀",title:"Visual Localization — 카메라 한 대로 실내 위치 찾기",
   pitch:"GPS가 닿지 않는 실내에서 카메라 영상만으로 기기 위치를 찾고, 그 결과를 AR 좌표계에 맞추는 R&D를 진행했습니다.",
   kv:[["역할","매핑·측위 파이프라인, Unity 클라이언트"],["인원","2명"],["결과","실내 내비게이션 시연 영상"]],
@@ -449,7 +450,8 @@ const FEAT=[
          ["결과","촬영 장비가 정밀할수록 측위 정확도가 올라가는 것을 확인했고, 측위만 안정되면 이후 추적은 AR Foundation에 맡길 수 있는 구조를 정리했습니다."]],
   flow:[["매핑","COLMAP · Kapture",1],["공간 맵","포인트 클라우드"],["측위 서버","Python · hloc",1],["Unity 앱","AR Foundation 원점 보정",1]],
   imgs:[["vl-pointcloud","매핑 포인트 클라우드"],["vl-marker","측위 후 AR 마커 표시"],["vl-editor","Unity 측위 테스트 씬"]],
-  links:[["시연 영상","https://youtu.be/y6E76q754nY"],["kapture-localization","https://github.com/naver/kapture-localization"]]},
+  videos:[["video/vl-navigation.mp4","vl-navigation","측위 후 길 안내 (1분 40초) · 지도와 경로선으로 목적지까지 이동"],["video/vl-labels.mp4","vl-labels","측위 결과 확인 (1분 17초) · 포인트 클라우드와 공간 라벨 표시"]],
+  links:[["kapture-localization","https://github.com/naver/kapture-localization"]]},
  {id:"p-holo",eye:"2021.09 – 2022.08 · KEPCO · 철기연 · VIRNECT",title:"HoloLens 공간 앵커 — 발전소 점검과 화재 대피",
   pitch:"현실 공간에 고정된 AR 경로와 이벤트로 사람을 안내하는 HoloLens 앱 두 개를 혼자 개발했습니다.",
   kv:[["역할","HoloLens·Android 앱 전체 (1인)"],["대상","필리핀 세부 발전소, 도시철도 역사"],["결과","순시점검 앱 · 대피 훈련 시뮬레이션"]],
@@ -459,6 +461,7 @@ const FEAT=[
          ["한 일",["Azure Spatial Anchors로 발전소 안 점검 경로 안내","장비를 인식한 뒤 점검 절차 진행, MRTK UI","역사 안 화재 이벤트와 이펙트를 발생시키고 지정된 탈출로까지 유도하는 시뮬레이션"]],
          ["결과","초보 점검자용 순시점검 앱과 화재 대피 훈련 시뮬레이션을 완성했습니다."]],
   flow:[["공간 스캔","앵커 배치",1],["Azure Spatial Anchors","클라우드 앵커"],["HoloLens · Android","경로 · 이벤트",1],["사용자 이동","도착 판정",1]],
+  video:["video/holo-cebu.mp4","holo-cebu-poster","세부 발전소 현장 영상 (3분 32초) · HoloLens 순시점검 앱 실제 사용 화면"],
   imgs:[["cebu-1","발전소 점검 UI"],["cebu-3","안내 화면"],["fire-1","역사 화재 이벤트"],["fire-2","대피 경로 안내"],["fire-3","탈출 유도"]]},
  {id:"p-nreal",eye:"2019.07 – 2020.07 · LG U+ · Pineone",title:"U+ Nreal AR Glasses — 문서 없는 새 기기를 출시까지",
   pitch:"XREAL의 전신인 Nreal Light를 LG U+가 국내에 처음 출시할 때 글래스용 Unity 앱을 혼자 맡았습니다.",
