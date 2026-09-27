@@ -250,7 +250,7 @@ dialog button{position:fixed;top:16px;right:16px;background:#fff;color:#111;bord
       <tr><td>Unity 에디터·C#으로 원하는 기능을 직접 구현</td><td>Nreal 글래스 앱과 HoloLens 앱 2종을 혼자 개발했습니다. 최근에는 <b>Unity 6와 UI Toolkit</b>으로 팀 공용 툴 모듈(BaseStudio)과 강화학습·모방학습 시뮬레이터(RoboSim)를 만들고 있습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-tool">RoboSim ↓</a></td></tr>
       <tr><td>Unity 생명주기·컴포넌트·입력·물리·렌더링·빌드 이해</td><td>Android, iOS, UWP(HoloLens), WebGL, Meta Quest, AR 글래스용 빌드를 출시하거나 납품했습니다. RoboSim에서는 Unity 물리로 로봇 학습 환경을 구성했고, Quest View에서는 Profiler로 렌더링 성능을 점검했습니다.</td><td><span class="chip direct">직접 경험</span></td></tr>
       <tr><td>Unity 플러그인·외부 SDK를 실제 프로젝트에 적용</td><td>PUDU 로봇 SDK, Nreal SDK, OVR SDK, MRTK, ARCore·AR Foundation, Azure Spatial Anchors, Fishnet, uLipSync, Ready Player Me, Naver Clova를 적용했습니다. Nreal SDK는 출시 전이라 문서가 거의 없어 베이징 개발팀과 직접 이슈를 풀었고, 지금은 PUDU 로봇 SDK를 뜯어 분석하며 안내 기능을 붙이고 있습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-nreal">Nreal ↓</a></td></tr>
-      <tr><td>외부 하드웨어를 SDK·API·시리얼·USB·네트워크로 연동</td><td>AR 글래스 5종, HoloLens 2, Meta Quest, 셋톱박스, 스마트 스피커, 안내로봇을 연동했습니다. 방식은 주로 <b>벤더 SDK와 API 호출</b>이었고, KISTI 과제에서는 <b>Fishnet 네트워크</b>로 여러 기기를 묶었습니다. 시리얼 포트를 직접 다루는 통신은 실무에서 깊게 해 보지 않았습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-robot">안내로봇 ↓</a></td></tr>
+      <tr><td>외부 하드웨어를 SDK·API·시리얼·USB·네트워크로 연동</td><td>AR 글래스 5종(Nreal Light, TCL, INMO, PNC, Model Solution), HoloLens 2, Meta Quest, 셋톱박스, 스마트 스피커, 안내로봇을 연동했습니다. 방식은 주로 <b>벤더 SDK와 API 호출</b>이었고, KISTI 과제에서는 <b>Fishnet 네트워크</b>로 여러 기기를 묶었습니다. 시리얼 포트를 직접 다루는 통신은 실무에서 깊게 해 보지 않았습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-robot">안내로봇 ↓</a></td></tr>
       <tr><td>연결 오류·실시간 동작 문제 해결</td><td>안내로봇에서는 라이다, ToF, 초음파, 바퀴 상태를 한 화면에 모아 막힘과 장애물을 판단하게 했습니다. AI Glass에서는 STT → LLM → TTS를 스트리밍으로 이어 응답 지연을 줄였습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-ai">AI Glass ↓</a></td></tr>
       <tr><td>생성형 AI 활용과 결과 검증</td><td>작업을 GitHub 이슈에 자세히 적어 쉬운 이슈는 AI가 처리하도록 자동화했고, 지금은 Orca로 여러 작업을 동시에 돌립니다. 결과는 PR로 받아 직접 읽고, 에디터와 실기기에서 확인한 뒤에 합칩니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#ai">AI 활용 ↓</a></td></tr>
     </tbody>
@@ -261,7 +261,7 @@ dialog button{position:fixed;top:16px;right:16px;background:#fff;color:#111;bord
 <section id="work">
   <div class="sec-head">
     <div><p class="eyebrow">Selected work</p><h2>대표 프로젝트 7</h2></div>
-    <p>하드웨어 연동과 공간 인식 경험이 잘 드러나는 순서로 골랐습니다. 프로젝트마다 문제, 제가 한 일, 구조, 결과 순서로 정리했고, 구조도에서 주황색 칸이 제가 직접 만든 부분입니다.</p>
+    <p>최근 프로젝트부터 시간 역순으로 정리했습니다. 프로젝트마다 문제, 제가 한 일, 구조, 결과 순서로 정리했고, 구조도에서 주황색 칸이 제가 직접 만든 부분입니다.</p>
   </div>
   <div id="projects"></div>
 </section>
@@ -381,16 +381,26 @@ const FEAT=[
   flow:[["태블릿 UI","캐릭터 · 음성 요청",1],["안내 앱","지점 선택 · 상태 관리",1],["PUDU SDK","분석 · 확장",1],["안전 판단","막힘 · 대기 · 우회",1],["로봇 주행","라이다 맵 · 안내 지점"]],
   video:["video/guide-robot.mp4","robot-face","시연 영상 (1분 10초) · 음성 요청부터 지점 이동까지"],
   imgs:[["robot-voice","음성 안내 화면"],["robot-guide","이동 중 로봇 디스플레이"],["robot-dashboard","라이다 맵과 센서 모니터링"]]},
- {id:"p-nreal",eye:"2019.07 – 2020.07 · LG U+ · Pineone",title:"U+ Nreal AR Glasses — 문서 없는 새 기기를 출시까지",
-  pitch:"XREAL의 전신인 Nreal Light를 LG U+가 국내에 처음 출시할 때 글래스용 Unity 앱을 혼자 맡았습니다.",
-  kv:[["역할","Unity 앱 전체 (1인)"],["협업","Nreal(중국 베이징) 개발팀"],["결과","LG U+ 상용 출시"]],
-  tags:["Unity","Android","Nreal SDK","8i"],
-  why:"출시 전 하드웨어를 문서 없이 붙이고 제조사와 직접 문제를 풀었습니다. 서드파티 SDK를 분석해 필요한 부분을 맞춰 쓰는 경험입니다.",
-  story:[["문제","출시 전 기기라 SDK 문서와 레퍼런스가 거의 없었고, 스마트폰을 컨트롤러로 쓰는 AR 공간 인터랙션을 처음부터 설계해야 했습니다."],
-         ["한 일",["휴대폰 연결형 글래스 컨트롤러와 AR 공간 인터랙션 개발","시야를 감싸는 구형 UI와 영상 시청 환경 개발","8i 라이브러리로 볼류메트릭 실사 3D 콘텐츠 재생","베이징을 여러 차례 방문해 Nreal 개발자와 SDK 이슈를 직접 해결"]],
-         ["결과","LG U+ 5G 서비스와 함께 국내 첫 AR 글래스로 출시했습니다."]],
-  flow:[["휴대폰","컨트롤러 입력"],["Unity 앱","공간 UI · 인터랙션",1],["콘텐츠 플레이어","영상 · 8i 실사 3D",1],["Nreal Light","6DoF 렌더링"]],
-  imgs:[["nreal-launch","국내 출시 현장"],["nreal-ui","구형 공간 UI"],["nreal-live","매장 체험 화면"]]},
+ {id:"p-tool",eye:"2025.03 – 현재 · VIRNECT",title:"RoboSim · BaseStudio — Unity 6로 만드는 로봇 학습 시뮬레이터",
+  pitch:"Isaac Sim 같은 도구가 널리 쓰이기 전, 로봇 강화학습을 쉽고 빠르게 돌려 보자는 컨셉으로 RoboSim을 만들었습니다. 그 기반이 되는 공용 툴 모듈 BaseStudio도 설계했습니다.",
+  kv:[["Unity","Unity 6 · UI Toolkit"],["역할","BaseStudio 모듈 설계, RoboSim 개발"],["상태","RoboSim 진행 중 · 모방학습 구현"]],
+  tags:["Unity 6","UI Toolkit","Editor Tooling","Package 구조","Physics","Robot Simulation"],
+  why:"현장에서 쓰는 설정·캘리브레이션 툴을 에디터 확장이나 런타임 UI로 만드는 일에 바로 이어지는 경험입니다.",
+  story:[["문제","로봇 강화학습 환경 하나를 만들려 해도 준비할 것이 많았습니다. 제품마다 저작도구를 새로 만들어 같은 기능이 반복되는 문제도 있었습니다."],
+         ["한 일",["Unity 6와 UITK로 로봇과 환경을 배치하고 학습을 빠르게 돌려 보는 시뮬레이션 저작도구 RoboSim 개발","강화학습에 이어 현재 모방학습(Imitation Learning) 기능 구현 중","UITK 공용 UI와 TreeView를 BaseStudio 모듈로 만들어 팀 전체가 쓰도록 배포","자사 3D 포즈 추정 기반 검사 제품 Inspector에 모델 import·Vision 패키지 통합"]],
+         ["결과","Inspector를 BaseStudio 위에서 완성했고, RoboSim은 같은 모듈 위에서 학습 기능을 계속 넓혀 가고 있습니다."]],
+  flow:[["BaseStudio","UITK 공용 UI · TreeView",1],["패키지","모델 import · Vision",1],["Inspector","3D 포즈 추정 검사"],["RoboSim","강화학습 · 모방학습",1]],
+  imgs:[["inspector-1","Inspector 저작 화면"],["inspector-2","Vision 연동 화면"]]},
+ {id:"p-kisti",eye:"2024.09 – 2025.02 · KISTI · VIRNECT",title:"KISTI 3차 — Fishnet으로 묶은 Meta Quest 다자 협업",
+  pitch:"PC 저작도구에서 만든 콘텐츠를 여러 명이 Meta Quest로 동시에 들어가 함께 다루는 협업 시스템을 만들었습니다.",
+  kv:[["역할","저작도구 일부, 멀티 협업 전체"],["인원","2명"],["결과","다자 VR 협업 · VR 체크리스트"]],
+  tags:["Unity","Meta Quest","OVR SDK","MRTK","Fishnet","USD"],
+  why:"네트워크로 여러 기기의 상태를 실시간으로 맞추는 구조입니다. 제어 장치와 콘텐츠의 상태를 동기화하는 일과 닮았습니다.",
+  story:[["문제","한 사용자가 오브젝트를 옮기거나 체크리스트를 처리하면 다른 참가자 화면에도 같은 상태가 보여야 했습니다."],
+         ["한 일",["저작도구에서 오브젝트 속성과 애니메이션 이벤트, 콘텐츠 불러오기와 인터랙션 구현","Fishnet으로 세션과 공유 오브젝트 동기화 설계","VR 체크리스트를 협업 세션에 연동"]],
+         ["결과","저작한 콘텐츠를 Quest 참가자들이 같은 상태로 보고 조작하는 다자 협업을 구현했습니다."]],
+  flow:[["PC 저작도구","속성 · 애니메이션 이벤트",1],["콘텐츠","USD"],["Fishnet 서버","세션 · 공유 오브젝트",1],["Quest 참가자 N명","VR 체크리스트",1]],
+  imgs:[["kisti-room","VR 협업 공간"],["kisti-checklist","VR 체크리스트"],["kisti-authoring","저작도구 화면"]]},
  {id:"p-ai",eye:"2023.12 – 2024.05 · VIRNECT 기술검토팀",title:"AI Glass — 기기 4종에서 도는 실시간 음성 비서",
   pitch:"작업자가 글래스를 쓰고 말로 물으면, 디지털 트윈의 공정 정보를 3D 아바타가 음성으로 답하는 비서를 만들어 전시했습니다.",
   kv:[["역할","Unity 클라이언트 전체"],["인원","3명 (AI 1, 서버 1, Unity 1)"],["결과","전시 출품 · 글래스 4종 동작"]],
@@ -402,16 +412,6 @@ const FEAT=[
   flow:[["글래스 마이크","4종 기기 계층",1],["STT","스트리밍"],["LLM","+ 디지털 트윈 데이터"],["TTS","스트리밍"],["아바타","립싱크 · 모션",1]],
   imgs:[["aiglass-poster","AI 트러블슈팅 에이전트"],["aiglass-ui","음성 질문 UI"],["aiglass-expo","전시 부스"],["aiglass-twin","디지털 트윈 연동 화면"]],
   links:[["시연 영상","https://youtu.be/N07bA4JCzBY"]]},
- {id:"p-tool",eye:"2025.03 – 현재 · VIRNECT",title:"RoboSim · BaseStudio — Unity 6로 만드는 로봇 학습 시뮬레이터",
-  pitch:"Isaac Sim 같은 도구가 널리 쓰이기 전, 로봇 강화학습을 쉽고 빠르게 돌려 보자는 컨셉으로 RoboSim을 만들었습니다. 그 기반이 되는 공용 툴 모듈 BaseStudio도 설계했습니다.",
-  kv:[["Unity","Unity 6 · UI Toolkit"],["역할","BaseStudio 모듈 설계, RoboSim 개발"],["상태","RoboSim 진행 중 · 모방학습 구현"]],
-  tags:["Unity 6","UI Toolkit","Editor Tooling","Package 구조","Physics","Robot Simulation"],
-  why:"현장에서 쓰는 설정·캘리브레이션 툴을 에디터 확장이나 런타임 UI로 만드는 일에 바로 이어지는 경험입니다.",
-  story:[["문제","로봇 강화학습 환경 하나를 만들려 해도 준비할 것이 많았습니다. 제품마다 저작도구를 새로 만들어 같은 기능이 반복되는 문제도 있었습니다."],
-         ["한 일",["Unity 6와 UITK로 로봇과 환경을 배치하고 학습을 빠르게 돌려 보는 시뮬레이션 저작도구 RoboSim 개발","강화학습에 이어 현재 모방학습(Imitation Learning) 기능 구현 중","UITK 공용 UI와 TreeView를 BaseStudio 모듈로 만들어 팀 전체가 쓰도록 배포","자사 3D 포즈 추정 기반 검사 제품 Inspector에 모델 import·Vision 패키지 통합"]],
-         ["결과","Inspector를 BaseStudio 위에서 완성했고, RoboSim은 같은 모듈 위에서 학습 기능을 계속 넓혀 가고 있습니다."]],
-  flow:[["BaseStudio","UITK 공용 UI · TreeView",1],["패키지","모델 import · Vision",1],["Inspector","3D 포즈 추정 검사"],["RoboSim","강화학습 · 모방학습",1]],
-  imgs:[["inspector-1","Inspector 저작 화면"],["inspector-2","Vision 연동 화면"]]},
  {id:"p-vl",eye:"2023.06 – 2023.11 · VIRNECT 기술검토팀",title:"Visual Localization — 카메라 한 대로 실내 위치 찾기",
   pitch:"GPS가 닿지 않는 실내에서 카메라 영상만으로 기기 위치를 찾고, 그 결과를 AR 좌표계에 맞추는 R&D를 진행했습니다.",
   kv:[["역할","매핑·측위 파이프라인, Unity 클라이언트"],["인원","2명"],["결과","실내 내비게이션 시연 영상"]],
@@ -423,16 +423,6 @@ const FEAT=[
   flow:[["매핑","COLMAP · Kapture",1],["공간 맵","포인트 클라우드"],["측위 서버","Python · hloc",1],["Unity 앱","AR Foundation 원점 보정",1]],
   imgs:[["vl-pointcloud","매핑 포인트 클라우드"],["vl-marker","측위 후 AR 마커 표시"],["vl-editor","Unity 측위 테스트 씬"]],
   links:[["시연 영상","https://youtu.be/y6E76q754nY"],["kapture-localization","https://github.com/naver/kapture-localization"]]},
- {id:"p-kisti",eye:"2024.09 – 2025.02 · KISTI · VIRNECT",title:"KISTI 3차 — Fishnet으로 묶은 Meta Quest 다자 협업",
-  pitch:"PC 저작도구에서 만든 콘텐츠를 여러 명이 Meta Quest로 동시에 들어가 함께 다루는 협업 시스템을 만들었습니다.",
-  kv:[["역할","저작도구 일부, 멀티 협업 전체"],["인원","2명"],["결과","다자 VR 협업 · VR 체크리스트"]],
-  tags:["Unity","Meta Quest","OVR SDK","MRTK","Fishnet","USD"],
-  why:"네트워크로 여러 기기의 상태를 실시간으로 맞추는 구조입니다. 제어 장치와 콘텐츠의 상태를 동기화하는 일과 닮았습니다.",
-  story:[["문제","한 사용자가 오브젝트를 옮기거나 체크리스트를 처리하면 다른 참가자 화면에도 같은 상태가 보여야 했습니다."],
-         ["한 일",["저작도구에서 오브젝트 속성과 애니메이션 이벤트, 콘텐츠 불러오기와 인터랙션 구현","Fishnet으로 세션과 공유 오브젝트 동기화 설계","VR 체크리스트를 협업 세션에 연동"]],
-         ["결과","저작한 콘텐츠를 Quest 참가자들이 같은 상태로 보고 조작하는 다자 협업을 구현했습니다."]],
-  flow:[["PC 저작도구","속성 · 애니메이션 이벤트",1],["콘텐츠","USD"],["Fishnet 서버","세션 · 공유 오브젝트",1],["Quest 참가자 N명","VR 체크리스트",1]],
-  imgs:[["kisti-room","VR 협업 공간"],["kisti-checklist","VR 체크리스트"],["kisti-authoring","저작도구 화면"]]},
  {id:"p-holo",eye:"2021.09 – 2022.08 · KEPCO · 철기연 · VIRNECT",title:"HoloLens 공간 앵커 — 발전소 점검과 화재 대피",
   pitch:"현실 공간에 고정된 AR 경로와 이벤트로 사람을 안내하는 HoloLens 앱 두 개를 혼자 개발했습니다.",
   kv:[["역할","HoloLens·Android 앱 전체 (1인)"],["대상","필리핀 세부 발전소, 도시철도 역사"],["결과","순시점검 앱 · 대피 훈련 시뮬레이션"]],
@@ -442,7 +432,17 @@ const FEAT=[
          ["한 일",["Azure Spatial Anchors로 발전소 안 점검 경로 안내","장비를 인식한 뒤 점검 절차 진행, MRTK UI","역사 안 화재 이벤트와 이펙트를 발생시키고 지정된 탈출로까지 유도하는 시뮬레이션"]],
          ["결과","초보 점검자용 순시점검 앱과 화재 대피 훈련 시뮬레이션을 완성했습니다."]],
   flow:[["공간 스캔","앵커 배치",1],["Azure Spatial Anchors","클라우드 앵커"],["HoloLens · Android","경로 · 이벤트",1],["사용자 이동","도착 판정",1]],
-  imgs:[["cebu-1","발전소 점검 UI"],["cebu-3","안내 화면"],["fire-1","역사 화재 이벤트"],["fire-2","대피 경로 안내"],["fire-3","탈출 유도"]]}
+  imgs:[["cebu-1","발전소 점검 UI"],["cebu-3","안내 화면"],["fire-1","역사 화재 이벤트"],["fire-2","대피 경로 안내"],["fire-3","탈출 유도"]]},
+ {id:"p-nreal",eye:"2019.07 – 2020.07 · LG U+ · Pineone",title:"U+ Nreal AR Glasses — 문서 없는 새 기기를 출시까지",
+  pitch:"XREAL의 전신인 Nreal Light를 LG U+가 국내에 처음 출시할 때 글래스용 Unity 앱을 혼자 맡았습니다.",
+  kv:[["역할","Unity 앱 전체 (1인)"],["협업","Nreal(중국 베이징) 개발팀"],["결과","LG U+ 상용 출시"]],
+  tags:["Unity","Android","Nreal SDK","8i"],
+  why:"출시 전 하드웨어를 문서 없이 붙이고 제조사와 직접 문제를 풀었습니다. 서드파티 SDK를 분석해 필요한 부분을 맞춰 쓰는 경험입니다.",
+  story:[["문제","출시 전 기기라 SDK 문서와 레퍼런스가 거의 없었고, 스마트폰을 컨트롤러로 쓰는 AR 공간 인터랙션을 처음부터 설계해야 했습니다."],
+         ["한 일",["휴대폰 연결형 글래스 컨트롤러와 AR 공간 인터랙션 개발","시야를 감싸는 구형 UI와 영상 시청 환경 개발","8i 라이브러리로 볼류메트릭 실사 3D 콘텐츠 재생","베이징을 여러 차례 방문해 Nreal 개발자와 SDK 이슈를 직접 해결"]],
+         ["결과","LG U+ 5G 서비스와 함께 국내 첫 AR 글래스로 출시했습니다."]],
+  flow:[["휴대폰","컨트롤러 입력"],["Unity 앱","공간 UI · 인터랙션",1],["콘텐츠 플레이어","영상 · 8i 실사 3D",1],["Nreal Light","6DoF 렌더링"]],
+  imgs:[["nreal-launch","국내 출시 현장"],["nreal-ui","구형 공간 UI"],["nreal-live","매장 체험 화면"]]}
 ];
 
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
