@@ -114,6 +114,10 @@ section{padding-block:64px;border-top:1px solid var(--line)}
 .flow-note i{display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--accent-soft);border:1px solid var(--accent);margin-right:6px;vertical-align:-1px}
 
 .vid{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#000}
+.yt{position:relative;overflow:hidden}
+.yt img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.yt:hover img{transform:scale(1.03)}
+.yt .play{position:absolute;left:16px;bottom:16px;background:rgba(0,0,0,.75);color:#fff;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px}
 .vid-cap{margin-top:8px;font-size:13px;color:var(--muted)}
 .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .gallery button{padding:0;border:0;border-radius:8px;overflow:hidden;background:var(--sunk);cursor:zoom-in;aspect-ratio:4/3}
@@ -247,8 +251,8 @@ dialog button{position:fixed;top:16px;right:16px;background:#fff;color:#111;bord
   <table class="fit">
     <thead><tr><th>역량</th><th>근거가 되는 경험</th><th>연결</th></tr></thead>
     <tbody>
-      <tr><td>Unity 6와 UI Toolkit</td><td>Unity 6와 UI Toolkit으로 저작도구를 만들고 있습니다. UI Toolkit으로 만든 공용 화면 요소와 트리 목록을 팀 공용 모듈 <b>BaseStudio</b>로 묶어, 새 도구를 만들 때마다 같은 화면을 다시 만들지 않게 했습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-tool">BaseStudio ↓</a></td></tr>
-      <tr><td>저작도구 3종 개발</td><td><b>KISTI 과제</b>에서 처음 저작도구를 만들어 오브젝트 속성, 애니메이션 이벤트, 콘텐츠 불러오기를 구현했습니다. 이후 공용 코어 BaseStudio를 설계했고, 그 위에서 검사 제품 <b>Inspector</b>와 로봇 학습 시뮬레이터 <b>RoboSim</b>을 개발했습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-kisti">KISTI ↓</a><br><a href="#p-tool">Inspector · RoboSim ↓</a></td></tr>
+      <tr><td>Unity 6와 UI Toolkit</td><td>Unity 6와 UI Toolkit으로 저작도구를 만들고 있습니다. UI Toolkit으로 만든 공용 화면 요소와 트리 목록을 팀 공용 모듈 <b>BaseStudio</b>로 묶어, 새 도구를 만들 때마다 같은 화면을 다시 만들지 않게 했습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-inspector">BaseStudio ↓</a></td></tr>
+      <tr><td>저작도구 3종 개발</td><td><b>KISTI 과제</b>에서 처음 저작도구를 만들어 오브젝트 속성, 애니메이션 이벤트, 콘텐츠 불러오기를 구현했습니다. 이후 공용 코어 BaseStudio를 설계했고, 그 위에서 검사 제품 <b>Inspector</b>와 로봇 학습 시뮬레이터 <b>RoboSim</b>을 개발했습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-kisti">KISTI ↓</a><br><a href="#p-inspector">Inspector ↓</a><br><a href="#p-robosim">RoboSim ↓</a></td></tr>
       <tr><td>다양한 XR 기기와 로봇</td><td>AR 글래스 5종(Nreal Light, TCL, INMO, PNC, Model Solution), HoloLens 2, Meta Quest, 스마트 스피커를 Unity에 붙여 출시하거나 납품했습니다. 지금은 PUDU 로봇청소기를 안내로봇으로 바꾸고 있고, 경기도 피지컬 AI 컨설팅에서는 <b>Isaac Sim</b>으로 공장 로봇 공정을 시뮬레이션하고 있습니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-robot">안내로봇 ↓</a><br><a href="#p-sim">피지컬 AI ↓</a></td></tr>
       <tr><td>SLAM 기반 실내 측위와 공간 이해</td><td>카메라 영상만으로 실내 위치를 찾는 측위 과정을 지도 만들기부터 AR 좌표 맞추기까지 구성했습니다. HoloLens에서는 공간 앵커로 현장에 콘텐츠를 고정했고, 안내로봇에서는 라이다 지도 위에 안내 지점을 저장합니다.</td><td><span class="chip direct">직접 경험</span><br><a href="#p-vl">실내 측위 ↓</a><br><a href="#space">공간 인식 ↓</a></td></tr>
     </tbody>
@@ -258,8 +262,8 @@ dialog button{position:fixed;top:16px;right:16px;background:#fff;color:#111;bord
 
 <section id="work">
   <div class="sec-head">
-    <div><p class="eyebrow">Selected work</p><h2>대표 프로젝트 8</h2></div>
-    <p>최근 프로젝트부터 시간 역순으로 정리했습니다. 프로젝트마다 문제, 제가 한 일, 구조, 결과 순서로 정리했고, 구조도에서 주황색 칸이 제가 직접 만든 부분입니다.</p>
+    <div><p class="eyebrow">Selected work</p><h2>대표 프로젝트 9</h2></div>
+    <p>기술적으로 가장 어려웠던 RoboSim과 Inspector를 먼저 두고, 나머지는 최근 순서로 정리했습니다. 프로젝트마다 문제, 제가 한 일, 구조, 결과 순서로 정리했고, 구조도에서 주황색 칸이 제가 직접 만든 부분입니다.</p>
   </div>
   <div id="projects"></div>
 </section>
@@ -351,9 +355,9 @@ dialog button{position:fixed;top:16px;right:16px;background:#fff;color:#111;bord
 const P=[
  {id:"robot",lane:"로봇",name:"안내로봇",s:"2026-06",e:null,co:"VIRNECT",what:"PUDU 로봇청소기 SDK를 뜯어 분석해 안내로봇으로 커스텀. 음성 안내 UI, 라이다 맵 안내 지점, 센서 기반 막힘 판단 (진행 중)",hot:"p-robot",img:"robot-guide"},
  {id:"physai",lane:"피지컬 AI",name:"경기도 피지컬 AI 컨설팅",s:"2026-05",e:null,co:"VIRNECT",what:"Isaac Sim으로 볼피더 부품 공급·팔레타이징 공정 시뮬레이션 (진행 중)",hot:"p-sim",img:"sim-palletizing"},
- {id:"robosim",lane:"로봇",name:"RoboSim",s:"2025-10",e:null,co:"VIRNECT",what:"강화학습을 쉽고 빠르게 돌려 보는 로봇 시뮬레이션 저작도구. Unity 6 · UI Toolkit. 현재 모방학습 구현 중",hot:"p-tool"},
- {id:"inspector",lane:"저작도구",name:"VIRNECT Inspector",s:"2025-03",e:null,co:"VIRNECT",what:"자사 3D 포즈 추정 기반 검사 제품. 저작도구 모듈 BaseStudio 설계, UITK 공용 UI·TreeView, Vision 통합 (진행 중)",hot:"p-tool",img:"inspector-1"},
- {id:"kisti",lane:"VR",name:"KISTI 3차 다자 협업",s:"2024-09",e:"2025-02",co:"VIRNECT",what:"저작도구 기능과 Meta Quest 뷰어, Fishnet 기반 다자 협업",hot:"p-kisti",img:"kisti-room"},
+ {id:"robosim",lane:"로봇",name:"RoboSim",s:"2025-10",e:null,co:"VIRNECT",what:"강화학습을 쉽고 빠르게 돌려 보는 로봇 시뮬레이션 저작도구. Unity 6 · UI Toolkit. 현재 모방학습 구현 중",hot:"p-robosim"},
+ {id:"inspector",lane:"저작도구",name:"VIRNECT Inspector",s:"2025-03",e:null,co:"VIRNECT",what:"자사 3D 포즈 추정 기반 검사 제품. 저작도구 모듈 BaseStudio 설계, UITK 공용 UI·TreeView, Vision 통합 (진행 중)",hot:"p-inspector",img:"inspector-1"},
+ {id:"kisti",lane:"VR",name:"KISTI 3차 다자간 협업",s:"2024-09",e:"2025-02",co:"VIRNECT",what:"저작도구 기능과 Meta Quest 뷰어, Fishnet 기반 다자간 협업",hot:"p-kisti",img:"kisti-room"},
  {id:"quest",lane:"VR",name:"Quest View",s:"2024-06",e:"2024-08",co:"VIRNECT",what:"Meta Quest용 사내 제품의 UI, 워크스페이스 연동 LMS 퀴즈, 성능 최적화 검토",img:"quest-profiler"},
  {id:"aiglass",lane:"AR 글래스",name:"AI Glass",s:"2023-12",e:"2024-05",co:"VIRNECT",what:"STT·LLM·TTS 스트리밍 음성 비서, 립싱크 아바타, 글래스 4종 대응",hot:"p-ai",img:"aiglass-poster"},
  {id:"vl",lane:"모바일 AR",name:"Visual Localization",s:"2023-06",e:"2023-11",co:"VIRNECT",what:"영상 기반 실내 측위 R&D. Kapture·COLMAP 매핑, AR Foundation 좌표 정합",hot:"p-vl",img:"vl-pointcloud"},
@@ -369,6 +373,29 @@ const P=[
  {id:"fruit",lane:"모바일 AR",name:"과일단어놀이",s:"2017-04",e:"2017-10",co:"Pineone",what:"실물 과일·손동작 인식 후 애니메이션을 재생하는 유아 교육 앱. 첫 Unity 프로젝트",img:"fruit"}
 ];
 const FEAT=[
+ {id:"p-robosim",eye:"2025.10 – 현재 · VIRNECT",title:"RoboSim — 코딩 없이 로봇 학습 환경을 만드는 시뮬레이터",
+  pitch:"로봇에게 작업을 가르치려면 보통 개발자가 학습 환경부터 코드로 만들어야 합니다. RoboSim은 화면에서 클릭과 드래그만으로 로봇과 물체를 배치하고 학습을 돌려 보게 만든 Unity 6 시뮬레이터입니다. Isaac Sim이 널리 쓰이기 전에 시작했습니다.",
+  kv:[["Unity","Unity 6 · UI Toolkit"],["인원","3명"],["상태","진행 중 · 모방학습 구현"]],
+  tags:["Unity 6","UI Toolkit","BaseStudio","로봇 모델(URDF)","강화학습","모방학습"],
+  why:"연구실에서 쓰던 로봇 학습 기술을 현장 운영팀도 쓸 수 있는 도구로 바꾸는 일입니다. 제가 한 프로젝트 중 기술적으로 가장 어려운 프로젝트입니다.",
+  story:[["문제","로봇 학습 환경 하나를 만들려 해도 로봇 모델, 물리 설정, 보상 규칙, 학습 코드를 모두 준비해야 했습니다. 개발자가 없으면 시작하기 어려웠습니다."],
+         ["한 일",["Inspector에서 만든 공용 코어 BaseStudio 위에서 RoboSim 저작도구 개발","로봇 모델을 불러와 환경에 배치하고, 학습과 시뮬레이션을 오가며 바로 확인하는 화면","강화학습에 이어, 사람이 보여 준 동작을 따라 배우는 모방학습 기능 구현 중"]],
+         ["결과","VIRNECT 제품 Robosim으로 소개되고 있고, 기술연구원과 함께 로봇 강화학습 실증 사례를 만들었습니다."]],
+  flow:[["BaseStudio","공용 화면 · 트리 목록",1],["편집 화면","로봇 · 물체 배치",1],["학습 규칙","보상 · 동작 노드"],["학습 실행","강화학습 · 모방학습",1]],
+  yt:["Lgl9JTBiamU","RoboSim 소개 영상 · VIRNECT X 기술연구원 실증 사례"],
+  links:[["제품 페이지","https://virnect.com/ko/products/robosim"],["YouTube에서 보기","https://www.youtube.com/watch?v=Lgl9JTBiamU"]],
+  imgs:[]},
+ {id:"p-inspector",eye:"2025.03 – 현재 · VIRNECT",title:"Inspector — 조립 검사 제품의 저작도구와 공용 코어 BaseStudio",
+  pitch:"스마트 기기로 조립 공정을 비추면 부품이 빠졌거나 잘못 끼워진 것을 바로 알려 주는 검사 제품입니다. 저는 검사 기준을 만드는 저작도구를 맡았습니다. 3D 모델을 불러와 검사할 지점과 단계를 정하는 화면입니다.",
+  kv:[["Unity","Unity · UI Toolkit"],["인원","3명"],["상태","진행 중"]],
+  tags:["UI Toolkit","BaseStudio","3D 모델 불러오기","3D 포즈 추정","SAM 3"],
+  why:"자사 원천기술인 3D 포즈 추정을 현장 작업자가 쓸 수 있는 검사 제품으로 감싸는 일입니다. 여기서 만든 공용 코어 BaseStudio는 RoboSim에도 그대로 쓰였습니다.",
+  story:[["문제","좋은 3D 인식 기술이 있어도, 검사할 부품과 순서를 누군가 쉽게 정해 줄 수 있어야 현장에서 씁니다. 제품마다 저작도구를 새로 만들어 같은 기능이 반복되는 문제도 있었습니다."],
+         ["한 일",["UI Toolkit으로 공용 화면 요소와 트리 목록을 만들어 팀 공용 코어 BaseStudio로 설계","3D 모델을 불러와 검사 지점과 단계를 정하는 저작도구 화면 개발","모델 불러오기와 비전 인식 기능을 패키지로 나눠 통합","2D 이상 탐지와 SAM 3를 함께 쓰자고 대표에게 직접 제안해 채택"]],
+         ["결과","Inspector 저작도구를 BaseStudio 위에서 계속 개발하고 있고, 같은 코어로 RoboSim도 만들었습니다."]],
+  flow:[["BaseStudio","공용 화면 · 트리 목록",1],["저작도구","모델 · 검사 지점 · 단계",1],["패키지","모델 불러오기 · 비전 인식",1],["Inspect 제품","현장 조립 검사"]],
+  links:[["제품 페이지","https://virnect.com/ko/products/inspect-assembly"]],
+  imgs:[["inspector-1","검사 지점과 단계 설정 화면"],["inspector-2","3D 모델 불러오기와 검출 설정"]]},
  {id:"p-robot",eye:"진행 중 · VIRNECT",title:"안내로봇 — 로봇청소기를 길 안내 로봇으로",
   pitch:"중국 PUDU의 안드로이드 기반 로봇청소기를 SDK부터 뜯어 보며 공공장소용 안내로봇으로 바꾸고 있습니다. 태블릿에 \"매표소로 안내해줘\"라고 말하면 로봇이 저장된 지점까지 앞장서 이동합니다.",
   kv:[["기반","PUDU 로봇청소기(Android) + 태블릿"],["역할","안내 UI, 주행·센서 연동, 웹 모니터링 대시보드"],["상태","진행 중 · 실내 시연"]],
@@ -391,25 +418,14 @@ const FEAT=[
   flow:[["공장 장면","설비 · 로봇 배치",1],["이동 로봇","상자 · 팔레트 운반",1],["로봇 팔","부품 공급 · 상자 쌓기",1],["Isaac Sim","물리 시뮬레이션"]],
   videos:[["video/sim-bowlfeeder.mp4","sim-bowlfeeder","볼피더 공정 (1분 42초) · 이동 로봇과 로봇 팔의 부품 공급"],["video/sim-palletizing.mp4","sim-palletizing","팔레타이징 공정 (1분 6초) · 상자 쌓기와 팔레트 운반"]],
   imgs:[["sim-amr","팔레트를 옮기는 이동 로봇"]]},
- {id:"p-tool",eye:"2025.03 – 현재 · VIRNECT",title:"RoboSim · BaseStudio — Unity 6로 만드는 로봇 학습 시뮬레이터",
-  pitch:"Isaac Sim 같은 도구가 널리 쓰이기 전, 로봇 강화학습을 쉽고 빠르게 돌려 보자는 컨셉으로 RoboSim을 만들었습니다. 그 기반이 되는 공용 툴 모듈 BaseStudio도 설계했습니다.",
-  kv:[["Unity","Unity 6 · UI Toolkit"],["역할","BaseStudio 모듈 설계, Inspector · RoboSim 개발"],["상태","Inspector · RoboSim 진행 중"]],
-  tags:["Unity 6","UI Toolkit","Editor Tooling","Package 구조","Physics","Robot Simulation"],
-  why:"현장에서 쓰는 설정·캘리브레이션 툴을 에디터 확장이나 런타임 UI로 만드는 일에 바로 이어지는 경험입니다.",
-  story:[["문제","로봇 강화학습 환경 하나를 만들려 해도 준비할 것이 많았습니다. 제품마다 저작도구를 새로 만들어 같은 기능이 반복되는 문제도 있었습니다."],
-         ["한 일",["Unity 6와 UITK로 로봇과 환경을 배치하고 학습을 빠르게 돌려 보는 시뮬레이션 저작도구 RoboSim 개발","강화학습에 이어 현재 모방학습(Imitation Learning) 기능 구현 중","UITK 공용 UI와 TreeView를 BaseStudio 모듈로 만들어 팀 전체가 쓰도록 배포","자사 3D 포즈 추정 기반 검사 제품 Inspector에 모델 import·Vision 패키지 통합"]],
-         ["결과","Inspector와 RoboSim 모두 BaseStudio 위에서 개발을 이어 가고 있습니다. RoboSim은 학습 기능을 계속 넓혀 가는 중입니다."]],
-  flow:[["BaseStudio","UITK 공용 UI · TreeView",1],["패키지","모델 import · Vision",1],["Inspector","3D 포즈 추정 검사"],["RoboSim","강화학습 · 모방학습",1]],
-  links:[["RoboSim 참고 영상","https://www.youtube.com/watch?v=Lgl9JTBiamU"],["Inspector 제품 페이지","https://virnect.com/ko/products/inspect-assembly"]],
-  imgs:[["inspector-1","Inspector 저작 화면"],["inspector-2","Vision 연동 화면"]]},
- {id:"p-kisti",eye:"2024.09 – 2025.02 · KISTI · VIRNECT",title:"KISTI 3차 — Fishnet으로 묶은 Meta Quest 다자 협업",
+ {id:"p-kisti",eye:"2024.09 – 2025.02 · KISTI · VIRNECT",title:"KISTI 3차 — Fishnet으로 묶은 Meta Quest 다자간 협업",
   pitch:"PC 저작도구에서 만든 콘텐츠를 여러 명이 Meta Quest로 동시에 들어가 함께 다루는 협업 시스템을 만들었습니다.",
   kv:[["역할","저작도구 일부, 멀티 협업 전체"],["인원","2명"],["결과","다자 VR 협업 · VR 체크리스트"]],
   tags:["Unity","Meta Quest","OVR SDK","MRTK","Fishnet","USD"],
   why:"네트워크로 여러 기기의 상태를 실시간으로 맞추는 구조입니다. 제어 장치와 콘텐츠의 상태를 동기화하는 일과 닮았습니다.",
   story:[["문제","한 사용자가 오브젝트를 옮기거나 체크리스트를 처리하면 다른 참가자 화면에도 같은 상태가 보여야 했습니다."],
          ["한 일",["저작도구에서 오브젝트 속성과 애니메이션 이벤트, 콘텐츠 불러오기와 인터랙션 구현","Fishnet으로 세션과 공유 오브젝트 동기화 설계","VR 체크리스트를 협업 세션에 연동"]],
-         ["결과","저작한 콘텐츠를 Quest 참가자들이 같은 상태로 보고 조작하는 다자 협업을 구현했습니다."]],
+         ["결과","저작한 콘텐츠를 Quest 참가자들이 같은 상태로 보고 조작하는 다자간 협업을 구현했습니다."]],
   flow:[["PC 저작도구","속성 · 애니메이션 이벤트",1],["콘텐츠","USD"],["Fishnet 서버","세션 · 공유 오브젝트",1],["Quest 참가자 N명","VR 체크리스트",1]],
   imgs:[["kisti-room","VR 협업 공간"],["kisti-checklist","VR 체크리스트"],["kisti-authoring","저작도구 화면"]]},
  {id:"p-ai",eye:"2023.12 – 2024.05 · VIRNECT 기술검토팀",title:"AI Glass — 기기 4종에서 도는 실시간 음성 비서",
@@ -489,14 +505,15 @@ document.getElementById("projects").innerHTML=FEAT.map(f=>{
   const story=f.story.map(([h,v])=>`<div><h4>${h}</h4>${Array.isArray(v)?`<ul>${v.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<p>${esc(v)}</p>`}</div>`).join("");
   const flow=`<div><h4>구조</h4><div class="flow">${f.flow.map(([b,s,me])=>`<div class="node${me?" me":""}"><b>${esc(b)}</b><small>${esc(s)}</small></div>`).join("")}</div><p class="flow-note"><i></i>직접 구현한 부분</p></div>`;
   const vid=(f.videos||(f.video?[f.video]:[])).map(v=>`<div><video class="vid" controls playsinline preload="metadata" poster="img/${v[1]}.jpg" src="${v[0]}"></video><p class="vid-cap">${esc(v[2])}</p></div>`).join("");
-  const gal=`<div class="gallery">${f.imgs.map(([src,cap])=>`<button type="button" data-img="img/${src}.jpg" data-cap="${esc(cap)}"><img src="img/${src}.jpg" alt="${esc(cap)}" loading="lazy"></button>`).join("")}</div>`;
+  const yt=f.yt?`<div><a class="vid yt" href="https://www.youtube.com/watch?v=${f.yt[0]}" target="_blank" rel="noopener" aria-label="${esc(f.yt[1])} (YouTube에서 열기)"><img src="https://i.ytimg.com/vi/${f.yt[0]}/maxresdefault.jpg" alt="" loading="lazy"><span class="play">▶ YouTube에서 보기</span></a><p class="vid-cap">${esc(f.yt[1])}</p></div>`:"";
+  const gal=!f.imgs.length?"":`<div class="gallery">${f.imgs.map(([src,cap])=>`<button type="button" data-img="img/${src}.jpg" data-cap="${esc(cap)}"><img src="img/${src}.jpg" alt="${esc(cap)}" loading="lazy"></button>`).join("")}</div>`;
   const links=f.links?`<div class="links">${f.links.map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener">${esc(l)} ↗</a>`).join("")}</div>`:"";
   return `<article class="proj" id="${f.id}">
     <div class="proj-meta"><p class="eyebrow">${esc(f.eye)}</p><h3>${esc(f.title)}</h3><p class="pitch">${esc(f.pitch)}</p>
       <dl class="kv">${f.kv.map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>
       <div class="tags">${f.tags.map(x=>`<span>${esc(x)}</span>`).join("")}</div>${links}
       <div class="why"><b>의미</b>${esc(f.why)}</div></div>
-    <div class="story">${vid}${story}${flow}${gal}</div></article>`;
+    <div class="story">${yt}${vid}${story}${flow}${gal}</div></article>`;
 }).join("");
 
 // list
